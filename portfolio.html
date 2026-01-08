@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+      Kitchen Portfolio | Custom Cabinet Projects & Transformations |
+      CustomKitchen
+    </title>
+    <meta
+      name="description"
+      content="Browse our portfolio of custom kitchen projects. See before & after photos, design styles, and real transformations from traditional to modern kitchens."
+    />
+    <meta
+      name="keywords"
+      content="kitchen portfolio, custom kitchen photos, kitchen remodel examples, cabinet showcase, kitchen transformations"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">CK</div>
+          <span>CustomKitchen</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="process.html" class="nav-link">Our Process</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li>
+            <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+          </li>
+        </ul>
+
+        <button class="nav-toggle">☰</button>
+      </nav>
+
+      <div class="mobile-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="process.html" class="nav-link">Our Process</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" style="min-height: 400px">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Our Kitchen Portfolio</h1>
+          <p class="lead">
+            Explore stunning kitchen transformations across America. From modern
+            minimalist to classic traditional, see what we can create for you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FILTER BUTTONS ========== -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 1rem">
+      <div class="container">
+        <div
+          style="
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+          "
+        >
+          <button class="btn btn-primary active" data-filter="all">
+            All Projects
+          </button>
+          <button class="btn btn-outline" data-filter="modern">Modern</button>
+          <button class="btn btn-outline" data-filter="traditional">
+            Traditional
+          </button>
+          <button class="btn btn-outline" data-filter="farmhouse">
+            Farmhouse
+          </button>
+          <button class="btn btn-outline" data-filter="luxury">Luxury</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PORTFOLIO GRID ========== -->
+    <section class="section" style="padding-top: 1rem">
+      <div class="container">
+        <div class="gallery">
+          <!-- Project 1 -->
+          <div class="gallery-item" data-category="modern">
+            <div
+              class="card-image"
+              style="
+                background-image: url('./assets/images/1.jpeg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="gallery-overlay">
+              <div class="badge badge-secondary mb-2">Modern</div>
+              <h3>Downtown Seattle Loft</h3>
+              <p>
+                High-gloss white cabinets, waterfall quartz island, integrated
+                appliances
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="gallery-item" data-category="traditional">
+            <div
+              class="card-image"
+              style="
+                background-image: url('./assets/images/2.jpeg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="gallery-overlay">
+              <div class="badge badge-secondary mb-2">Traditional</div>
+              <h3>Boston Colonial Revival</h3>
+              <p>
+                Cherry wood cabinets, granite countertops, ornate crown molding
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="gallery-item" data-category="farmhouse">
+            <div
+              class="card-image"
+              style="
+                background-image: url('./assets/images/3.jpeg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="gallery-overlay">
+              <div class="badge badge-secondary mb-2">Farmhouse</div>
+              <h3>Austin Farmhouse</h3>
+              <p>
+                White shaker cabinets, butcher block island, apron sink, open
+                shelving
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="gallery-item" data-category="luxury">
+            <div
+              class="card-image"
+              style="
+                background-image: url('./assets/images/4.jpeg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="gallery-overlay">
+              <div class="badge badge-secondary mb-2">Luxury</div>
+              <h3>Beverly Hills Estate</h3>
+              <p>
+                Custom walnut cabinets, Calacatta marble, professional-grade
+                appliances
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="gallery-item" data-category="modern">
+            <div
+              class="card-image"
+              style="
+                background-image: url('./assets/images/5.jpeg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="gallery-overlay">
+              <div class="badge badge-secondary mb-2">Modern</div>
+              <h3>Portland Contemporary</h3>
+              <p>
+                Two-tone cabinets, concrete countertops, minimalist hardware
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="gallery-item" data-category="traditional">
+            <div
+              class="card-image"
+              style="
+                background-image: url('./assets/images/6.jpeg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="gallery-overlay">
+              <div class="badge badge-secondary mb-2">Traditional</div>
+              <h3>Charleston Historic Home</h3>
+              <p>Glazed maple cabinets, marble counters, butler's pantry</p>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div class="gallery-item" data-category="farmhouse">
+            <div
+              class="card-image"
+              style="
+                background-image: url('./assets/images/7.jpeg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="gallery-overlay">
+              <div class="badge badge-secondary mb-2">Farmhouse</div>
+              <h3>Nashville Country Kitchen</h3>
+              <p>
+                Distressed oak cabinets, soapstone counters, barn door pantry
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="gallery-item" data-category="luxury">
+            <div
+              class="card-image"
+              style="
+                background-image: url('./assets/images/8.jpeg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="gallery-overlay">
+              <div class="badge badge-secondary mb-2">Luxury</div>
+              <h3>Aspen Mountain Retreat</h3>
+              <p>
+                Reclaimed wood cabinets, marble waterfall island, chef's kitchen
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 9 -->
+          <div class="gallery-item" data-category="modern">
+            <div
+              class="card-image"
+              style="
+                background-image: url('./assets/images/9.jpeg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div class="gallery-overlay">
+              <div class="badge badge-secondary mb-2">Modern</div>
+              <h3>Miami Beach Condo</h3>
+              <p>
+                Sleek flat-panel cabinets, quartz surfaces, handle-free design
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURED PROJECT ========== -->
+    <section class="section" style="background-color: var(--color-off-white)">
+      <div class="container">
+        <div class="text-center mb-4">
+          <div class="badge badge-secondary mb-2">Featured Project</div>
+          <h2>Transform Your Kitchen Like These Homeowners</h2>
+        </div>
+
+        <div class="grid grid-2" style="gap: 3rem; align-items: center">
+          <div>
+            <h3>Denver Craftsman Kitchen Remodel</h3>
+            <p class="lead">$42,000 • 6 weeks • 280 sq ft</p>
+
+            <h4 class="mt-3">Project Overview</h4>
+            <p>
+              The Martinez family wanted to update their 1920s craftsman home's
+              kitchen while preserving its historic character. We designed
+              custom quarter-sawn oak cabinets with period-appropriate details
+              and modern functionality.
+            </p>
+
+            <h4 class="mt-3">Features Included</h4>
+            <ul style="padding-left: 1.25rem">
+              <li>Custom quarter-sawn oak cabinets with inset doors</li>
+              <li>Leathered granite countertops</li>
+              <li>Farmhouse sink with bridge faucet</li>
+              <li>Glass-front upper cabinets with interior lighting</li>
+              <li>Pull-out spice racks and deep drawer organizers</li>
+              <li>Custom range hood with corbel details</li>
+            </ul>
+
+            <div class="testimonial mt-4">
+              <div class="rating">★★★★★</div>
+              <p class="testimonial-text">
+                "They perfectly balanced modern convenience with period
+                authenticity. Our kitchen is now the heart of our home!"
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">LM</div>
+                <div class="testimonial-info">
+                  <h4>Lisa & Carlos Martinez</h4>
+                  <p>Denver, CO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <div
+                class="card-image"
+                style="
+                  height: 300px;
+                  background-image: url('./assets/images/old.jpeg');
+                  background-size: cover;
+                  background-position: center;
+                "
+              ></div>
+            </div>
+            <div class="card mt-3">
+              <div
+                class="card-image"
+                style="
+                  height: 300px;
+                  background-image: url('./assets/images/new.jpeg');
+                  background-size: cover;
+                  background-position: center;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STYLE GUIDE ========== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2>Popular Kitchen Styles</h2>
+          <p class="lead">Find inspiration for your perfect kitchen design</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-content">
+              <h3>Modern & Contemporary</h3>
+              <p>
+                Clean lines, minimalist hardware, flat-panel or slab doors,
+                neutral color palettes. Features like handle-free cabinets,
+                integrated appliances, and sleek countertops create a
+                streamlined, sophisticated look.
+              </p>
+              <p>
+                <strong>Best for:</strong> Urban homes, open-concept spaces,
+                minimalists
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Traditional & Classic</h3>
+              <p>
+                Raised-panel doors, ornate moldings, rich wood stains,
+                decorative hardware. Timeless elegance with details like
+                corbels, furniture feet, and glass-front cabinets.
+              </p>
+              <p>
+                <strong>Best for:</strong> Historic homes, formal spaces,
+                classic aesthetics
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Farmhouse & Rustic</h3>
+              <p>
+                Shaker-style cabinets, open shelving, apron sinks, natural wood
+                elements. Warm, inviting spaces with vintage-inspired details
+                and practical storage.
+              </p>
+              <p>
+                <strong>Best for:</strong> Country homes, families, casual
+                entertaining
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Transitional</h3>
+              <p>
+                Blend of traditional and contemporary elements. Simple shaker
+                doors with modern hardware, neutral colors with subtle details.
+                The most versatile and popular style.
+              </p>
+              <p>
+                <strong>Best for:</strong> Most homes, resale value, broad
+                appeal
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-section">
+          <h2>Ready to Create Your Dream Kitchen?</h2>
+          <p>
+            Let's bring your vision to life. Schedule a free design consultation
+            and see how we can transform your space.
+          </p>
+          <a href="contact.html" class="btn btn-white btn-lg"
+            >Start Your Project Today</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>CustomKitchen</h3>
+            <p>Crafting beautiful, functional kitchens for over 25 years.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link">f</a>
+              <a href="#" class="social-link">📷</a>
+              <a href="#" class="social-link">P</a>
+              <a href="#" class="social-link">H</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Services</h3>
+            <div class="footer-links">
+              <a href="services.html#design" class="footer-link"
+                >Kitchen Design</a
+              >
+              <a href="services.html#manufacturing" class="footer-link"
+                >Custom Cabinets</a
+              >
+              <a href="services.html#installation" class="footer-link"
+                >Installation</a
+              >
+              <a href="services.html#hardware" class="footer-link"
+                >Hardware & Accessories</a
+              >
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Company</h3>
+            <div class="footer-links">
+              <a href="about.html" class="footer-link">About Us</a>
+              <a href="portfolio.html" class="footer-link">Portfolio</a>
+              <a href="process.html" class="footer-link">Our Process</a>
+              <a href="testimonials.html" class="footer-link">Testimonials</a>
+              <a href="blog.html" class="footer-link">Blog</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Get In Touch</h3>
+            <div class="footer-links">
+              <a href="tel:+18005551234" class="footer-link"
+                >📞 (800) 555-1234</a
+              >
+              <a href="mailto:info@customkitchen.com" class="footer-link"
+                >✉️ info@customkitchen.com</a
+              >
+              <a href="contact.html" class="footer-link">📍 Find a Showroom</a>
+              <a href="pricing.html" class="footer-link">💬 Get Free Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 CustomKitchen. All rights reserved.</p>
+          <p
+            style="
+              margin-top: 0.75rem;
+              font-size: 0.85rem;
+              color: var(--color-gray);
+              line-height: 1.5;
+            "
+          >
+            <strong>Disclaimer:</strong> This site is a free service to assist
+            homeowners in connecting with local service providers. All
+            contractors/providers are independent and KitchenUpgradePros does
+            not warrant or guarantee any work performed. It is the
+            responsibility of the homeowner to verify that the hired contractor
+            furnishes the necessary license and insurance required for the work
+            being performed. All persons depicted in a photo or video are actors
+            or models and not contractors listed on this site.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
