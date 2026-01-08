@@ -511,11 +511,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     consentBanner.innerHTML = `
       <p style="margin: 0; flex: 1; min-width: 200px;">
-        We use cookies to improve your experience on our site. By continuing to browse, you agree to our use of cookies.
+        We use cookies to improve your experience on our site. Review our
+        <a href="cookie.html" style="color: var(--color-white); text-decoration: underline;">Cookie Policy</a>
+        and choose your preference.
       </p>
-      <button class="btn btn-primary" onclick="acceptCookies()" style="flex-shrink: 0;">
-        Accept
-      </button>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: flex-end;">
+        <button class="btn btn-outline" onclick="declineCookies()" style="flex-shrink: 0;">
+          Decline
+        </button>
+        <button class="btn btn-primary" onclick="acceptCookies()" style="flex-shrink: 0;">
+          Accept
+        </button>
+      </div>
     `;
 
     document.body.appendChild(consentBanner);
@@ -524,7 +531,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ===== ACCEPT COOKIES FUNCTION =====
 function acceptCookies() {
-  localStorage.setItem("cookieConsent", "true");
+  localStorage.setItem("cookieConsent", "accepted");
+  const banner = document.querySelector(".cookie-consent");
+  if (banner) {
+    banner.style.animation = "slideDown 0.3s ease reverse";
+    setTimeout(() => banner.remove(), 300);
+  }
+}
+
+// ===== DECLINE COOKIES FUNCTION =====
+function declineCookies() {
+  localStorage.setItem("cookieConsent", "declined");
   const banner = document.querySelector(".cookie-consent");
   if (banner) {
     banner.style.animation = "slideDown 0.3s ease reverse";
