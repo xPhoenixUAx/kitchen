@@ -69,44 +69,41 @@
 }
 
 /* === RESET & BASE === */
-* {
-  .hero {
-    position: relative;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    background: var(--gradient-primary);
-    color: var(--color-white);
-    overflow: hidden;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        60% 60% at 20% 20%,
-        rgba(255, 255, 255, 0.16),
-        transparent
-      ),
-      radial-gradient(40% 40% at 80% 0%, rgba(255, 214, 170, 0.25), transparent),
-      url('data:image/svg+xml,<svg width="140" height="140" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.18)"/></pattern></defs><rect width="140" height="140" fill="url(%23dots)"/></svg>');
-    opacity: 0.7;
-  }
-  .hero::after {
-    content: "";
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.14) 0%,
-      rgba(255, 255, 255, 0) 60%
-    );
-    filter: blur(40px);
-    bottom: -120px;
-    right: -80px;
-    opacity: 0.8;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 a {
@@ -117,6 +114,8 @@ a {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -136,19 +135,19 @@ h5,
 h6 {
   font-family: var(--font-heading);
   line-height: 1.2;
-  margin-bottom: var(--spacing-sm);
+  margin: 0 0 var(--spacing-sm);
   color: var(--color-black);
   font-weight: 600;
 }
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: var(--spacing-md);
+  margin: 0 0 var(--spacing-md);
 }
 
 h2 {
   font-size: 2rem;
-  margin-bottom: var(--spacing-md);
+  margin: 0 0 var(--spacing-md);
 }
 
 h3 {
@@ -160,7 +159,7 @@ h4 {
 }
 
 p {
-  margin-bottom: var(--spacing-sm);
+  margin: 0 0 var(--spacing-sm);
   color: var(--color-dark-gray);
 }
 
@@ -239,7 +238,7 @@ p {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
-  padding: var(--spacing-sm) 0;
+  padding: var(--spacing-sm) 10px;
 }
 
 .logo {
@@ -248,7 +247,8 @@ p {
   font-weight: 700;
   color: var(--color-primary);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
@@ -483,6 +483,44 @@ p {
 
 .card-content {
   padding: var(--spacing-md);
+}
+
+.card-content ul,
+.card-content ol {
+  margin: 0 0 var(--spacing-sm);
+  padding-left: 1.25rem;
+}
+
+.card-content ul {
+  list-style: disc;
+}
+
+.card-content ol {
+  list-style: decimal;
+}
+
+.card-content li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.card-content li:last-child {
+  margin-bottom: 0;
+}
+
+.card-content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card-content th,
+.card-content td {
+  padding: var(--spacing-xs);
+  border: 1px solid var(--color-light-gray);
+  text-align: left;
+  vertical-align: top;
 }
 
 .card-title {
