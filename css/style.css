@@ -205,6 +205,10 @@ p {
   gap: var(--spacing-md);
 }
 
+.grid > * {
+  min-width: 0;
+}
+
 .grid-2 {
   grid-template-columns: 1fr;
 }
@@ -249,7 +253,7 @@ p {
 }
 
 .logo-icon {
-  width: 40px;
+  width: 70px;
   height: 40px;
   background-color: var(--color-primary);
   border-radius: 4px;
@@ -800,6 +804,7 @@ p {
 /* === FORMS === */
 .form-group {
   margin-bottom: var(--spacing-md);
+  min-width: 0;
 }
 
 .form-label {
@@ -813,13 +818,17 @@ p {
 .form-textarea,
 .form-select {
   width: 100%;
-  padding: 0.875rem;
+  min-width: 0;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
   border: 2px solid var(--color-light-gray);
   border-radius: var(--border-radius);
   font-size: 1rem;
   font-family: inherit;
   transition: var(--transition);
   background-color: var(--color-white);
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .form-input:focus,
@@ -870,6 +879,22 @@ p {
   display: block;
 }
 
+.quote-form {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--color-off-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 600px) {
+  .quote-form {
+    padding: 1.25rem;
+  }
+}
+
 /* === PRICING === */
 .pricing-card {
   background-color: var(--color-white);
@@ -879,6 +904,8 @@ p {
   text-align: center;
   border: 2px solid var(--color-light-gray);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .pricing-card:hover {
@@ -929,6 +956,7 @@ p {
   list-style: none;
   margin: var(--spacing-md) 0;
   text-align: left;
+  flex: 1;
 }
 
 .pricing-features li {
@@ -937,6 +965,14 @@ p {
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-xs);
+}
+
+.pricing-card .btn-block {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: var(--spacing-sm);
 }
 
 .pricing-features li::before {
@@ -1286,6 +1322,34 @@ p {
 
 .pulse {
   animation: pulse 2s infinite;
+}
+
+/* === SMALL SCREEN TWEAKS (<=600px) === */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+  }
+
+  .cta-section {
+    padding: var(--spacing-lg);
+  }
 }
 
 /* === TABLET BREAKPOINT (768px) === */
